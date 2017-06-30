@@ -3,8 +3,10 @@
     <div class="sidebar">
       <el-menu :default-active="onRoutes"
                :default-openeds="onRouteKeys"
-               class="el-menu-vertical-demo"
-               theme="dark" router>
+               class="el-menu-vertical"
+               theme="dark"
+               uniqueOpened="true"
+               router>
         <template v-for="item in menuList">
           <sub-menu :param="item"></sub-menu>
         </template>
@@ -106,12 +108,12 @@
     transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
   }
 
-  .el-menu-vertical-demo .el-submenu .el-menu-item {
+  .el-menu-vertical .el-submenu .el-menu-item {
     height: 45px;
     line-height: 45px;
   }
 
-  .el-menu-vertical-demo .el-menu-item, .el-menu-vertical-demo .el-submenu__title {
+  .el-menu-vertical .el-menu-item, .el-menu-vertical .el-submenu__title {
     height: 45px;
     line-height: 45px;
   }

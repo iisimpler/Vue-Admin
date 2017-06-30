@@ -4,22 +4,21 @@
     <!-- Logo -->
     <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini">颐康</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">&nbsp;&nbsp; <b>Vue-Admin</b></span>
+      <span class="logo-lg">&nbsp;&nbsp; <b>颐康养老院</b></span>
     </a>
 
-    <!-- Header Navbar: style can be found in header.less -->
+    <!-- Header Navbar -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"
-         @click.stop.prevent="toggleSidebar(!sidebar.opened)">
-        <span class="sr-only">Toggle navigation</span>
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" @click.stop.prevent="toggleSidebar(!sidebar.opened)">
+        <span class="sr-only"></span>
       </a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
+          <!-- Messages-->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" @click.stop.prevent="showMessageBox=!showMessageBox">
               <i class="fa fa-envelope-o"></i>
@@ -40,7 +39,7 @@
               <li><a href="#">查看所有</a></li>
             </ul>
           </li>
-          <!-- User Account: style can be found in dropdown.less -->
+          <!-- User Account-->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" @click.stop.prevent="showProfileBox=!showProfileBox">
               <img src="../../../static/img/user2-160x160.jpg" class="user-image" alt="User Image">
@@ -94,7 +93,7 @@
         showMessageBox: false,
         showProfileBox: false,
         list: [],
-        count: 4,
+        count: 0,
       }
     },
     computed: mapGetters({
@@ -222,7 +221,7 @@
     display: block;
     background-image: url("../../../static/img/foot_icon.png");
     background-repeat: no-repeat;
-    background-position: 15px -6px;
+    background-position: 15px -112px;
     height: 38px;
     line-height: 38px;
     margin-top: 6px;
@@ -611,7 +610,7 @@
   }
 
   .main-header .navbar {
-    background-color: #3c8dbc;
+    background-color: #324157;
   }
 
   .main-header .navbar .nav > li > a {
@@ -650,24 +649,24 @@
   }
 
   .main-header .navbar .sidebar-toggle:hover {
-    background-color: #367fa9;
+    background-color: #324157;
   }
 
   .main-header .logo {
-    background-color: #367fa9;
+    background-color: #324157;
     color: #ffffff;
     border-bottom: 0 solid transparent;
   }
 
   .main-header .logo:hover {
-    background-color: #357ca5;
+    background-color: #324157;
   }
 
   .main-header li.user-header {
-    background-color: #3c8dbc;
+    background-color: #324157;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
 
     .main-header .logo {
       display: none;
@@ -714,7 +713,7 @@
     .navbar-nav > .user-menu .user-image {
       float: none;
       margin-right: 0;
-      margin-top: 0px;
+      margin-top: 0;
       line-height: 10px;
     }
 

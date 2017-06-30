@@ -32,7 +32,6 @@ function getBaseUrl(url) {
   return RegExp.$1;
 }
 
-// axios.defaults.baseURL = 'https://www.baidu.com';
 axios.defaults.baseURL = getBaseUrl(window.location.href);
 axios.defaults.headers.common['authUid'] = auth.getUid();
 axios.defaults.headers.common['authSid'] = auth.getSid();

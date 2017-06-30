@@ -4,7 +4,7 @@
       <div class="login">
         <div class="login-form">
           <div class="card-block">
-            <h1>Vue-Admin-Login</h1>
+            <h1>颐康养老院</h1>
             <p class="text-muted">任意用户名/密码登录</p>
             <div class="input-group m-b-1">
               <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -30,7 +30,7 @@
         <div class="login-register">
           <div class="card-block">
             <h2>注册</h2>
-            <p>平台暂时只支持使用公司邮箱注册.</p>
+            <p>暂未开放注册功能</p>
             <el-button type="info" class="btn btn-primary active m-t-1"> 马上注册</el-button>
           </div>
         </div>

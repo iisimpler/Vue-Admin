@@ -6,15 +6,65 @@
         "name": "管理员"
       }
   },
-  "resourceList":[{"id":52,"parentId":null,"sort":0,"name":"登录","code":"/login","type":3,"usable":"1","remarks":"","children":[]},
+  "menuList": [
+    {"id":0,"parentId":null,"sort":0,"name":"仪表盘","href":"/index","icon":"fa fa-dashboard","isShow":"1","children":[]},
+    {"id":1,"parentId":null,"sort":1,"name":"员工管理","href":"/staffManagement","icon":"fa fa-users","isShow":"0","children":[
+      {"id":2,"parentId":1,"sort":0,"name":"员工信息管理","href":"/staffManagement/staffInformatinManagement","icon":"fa fa-info-circle","isShow":"0","children":[]},
+      {"id":3,"parentId":1,"sort":1,"name":"公告消息","href":"/staffManagement/notices","icon":"fa fa-bullhorn","isShow":"1","children":[]}
+    ]},
+    {"id":4,"parentId":null,"sort":2,"name":"老人管理","href":"/careManagement","icon":"fa fa-heart","isShow":"1","children":[
+      {"id":5,"parentId":4,"sort":0,"name":"老人信息管理","href":"/careManagement/careManagement","icon":"fa fa-info-circle","isShow":"1","children":[]}
+    ]},
+    {"id":6,"parentId":null,"sort":3,"name":"物品管理","href":"/goodsManagement","icon":"fa fa-cubes","isShow":"1","children":[
+      {"id":7,"parentId":6,"sort":0,"name":"库存查询","href":"/goodsManagement/goodsSearch","icon":"fa fa-search","isShow":"1","children":[]},
+      {"id":8,"parentId":6,"sort":1,"name":"采购历史","href":"/goodsManagement/purchaseHistory","icon":"fa fa-buysellads","isShow":"1","children":[]},
+      {"id":9,"parentId":6,"sort":2,"name":"入库历史","href":"/goodsManagement/storageHistory","icon":"fa fa-user","isShow":"1","children":[]},
+      {"id":10,"parentId":6,"sort":3,"name":"领用历史","href":"/goodsManagement/useHistory","icon":"fa fa-reply-all","isShow":"1","children":[]},
+      {"id":11,"parentId":6,"sort":4,"name":"物品维护","href":"/goodsManagement/goodsMaintenance","icon":"fa fa-user","isShow":"1","children":[]}
+    ]},
+    {"id":12,"parentId":null,"sort":4,"name":"运营管理","href":"/serviceTypeManagement","icon":"fa fa-houzz","isShow":"1","children":[
+      {"id":13,"parentId":12,"sort":0,"name":"服务类型管理","href":"/serviceTypeManagement/serviceTypeManagement","icon":"fa fa-user","isShow":"1","children":[]},
+      {"id":14,"parentId":12,"sort":1,"name":"床位管理","href":"/serviceTypeManagement/purchaseHistory","icon":"fa fa-user","isShow":"1","children":[]},
+      {"id":15,"parentId":12,"sort":2,"name":"监控设备","href":"/serviceTypeManagement/storageHistory","icon":"fa fa-user","isShow":"1","children":[]},
+      {"id":16,"parentId":12,"sort":3,"name":"意见反馈","href":"/serviceTypeManagement/useHistory","icon":"fa fa-user","isShow":"1","children":[]}
+    ]},
+    {"id":17,"parentId":null,"sort":5,"name":"财务管理","href":"/financialManagement","icon":"fa fa-money","isShow":"1","children":[
+      {"id":18,"parentId":17,"sort":0,"name":"收入记录","href":"/financialManagement/earningsRecord","icon":"fa fa-user","isShow":"1","children":[]},
+      {"id":19,"parentId":17,"sort":1,"name":"支出记录","href":"/financialManagement/expenditureRecord","icon":"fa fa-user","isShow":"1","children":[]},
+      {"id":20,"parentId":17,"sort":2,"name":"财务报表","href":"/financialManagement/financialStatements","icon":"fa fa-user","isShow":"1","children":[]}
+    ]},
+    {"id":21,"parentId":null,"sort":6,"name":"居家上门服务","href":"/homeService","icon":"fa fa-first-order","isShow":"1","children":[
+      {"id":22,"parentId":21,"sort":0,"name":"订单列表","href":"/homeService/orderList","icon":"fa fa-orders","isShow":"1","children":[]}
+    ]},
+    {"id":50,"parentId":null,"sort":6,"name":"系统管理","href":"/sys","icon":"el-icon-setting","isShow":"1","children":
+    [
+      {"id":51,"parentId":50,"sort":0,"name":" 资源管理","href":"/sys/resource","icon":"fa fa-database","isShow":"1","children":[]},
+      {"id":52,"parentId":50,"sort":1,"name":"菜单管理","href":"/sys/menuList","icon":"fa fa-navicon","isShow":"1","children":[]},
+      {"id":53,"parentId":50,"sort":2,"name":"角色管理","href":"/sys/roleList","icon":"fa fa-universal-access","isShow":"1","children":[]},
+      {"id":54,"parentId":50,"sort":3,"name":"用户管理","href":"/sys/userList","icon":"fa fa-user-plus","isShow":"1","children":[]}
+    ]
+    }],
+
+
+  "messageList":[
+    {"id":196,"title":"升级通知","summary":"今晚八点到明日凌晨升级","userId":1,"entityId":6},
+    {"id":195,"title":"测试消息2","summary":"1张产品图片处理","userId":1,"entityId":7}
+  ],
+
+
+  "resourceList":[{
+    "id":52,"parentId":null,"sort":0,"name":"登录","code":"/login","type":3,"usable":"1","remarks":"","children":[]},
     {"id":68,"parentId":null,"sort":0,"name":"仪表盘","code":"/index","type":1,"usable":"1","remarks":"","children":[]},
-    {"id":69,"parentId":null,"sort":0,"name":"系统管理","code":"/sys","type":1,"usable":"1","remarks":"","children":[{"id":82,"parentId":69,"sort":0,"name":"资源管理","code":"/sys/resource","type":1,"usable":"1","remarks":"","children":[{"id":99,"parentId":82,"sort":0,"name":"/sys/resource/get","code":"/sys/resource/get","type":3,"usable":"1","remarks":"","children":[]},
-      {"id":100,"parentId":82,"sort":0,"name":"/sys/resource/update","code":"/sys/resource/update","type":3,"usable":"1","remarks":"","children":[]},
-      {"id":101,"parentId":82,"sort":0,"name":"/sys/resource/delete","code":"/sys/resource/delete","type":3,"usable":"1","remarks":"","children":[]},
-      {"id":102,"parentId":82,"sort":0,"name":"/sys/resource/add","code":"/sys/resource/add","type":3,"usable":"1","remarks":"","children":[]},
-      {"id":103,"parentId":82,"sort":0,"name":"/sys/resource/page","code":"/sys/resource/page","type":3,"usable":"1","remarks":"","children":[]},
-      {"id":104,"parentId":82,"sort":0,"name":"/sys/resource/list","code":"/sys/resource/list","type":3,"usable":"1","remarks":"","children":[]},
-      {"id":105,"parentId":82,"sort":0,"name":"/sys/resource/list2","code":"/sys/resource/list2","type":3,"usable":"1","remarks":"","children":[]}]},
+    {"id":69,"parentId":null,"sort":0,"name":"系统管理","code":"/sys","type":1,"usable":"1","remarks":"","children":[
+      {"id":82,"parentId":69,"sort":0,"name":"资源管理","code":"/sys/resource","type":1,"usable":"1","remarks":"","children":[
+        {"id":99,"parentId":82,"sort":0,"name":"/sys/resource/get","code":"/sys/resource/get","type":3,"usable":"1","remarks":"","children":[]},
+        {"id":100,"parentId":82,"sort":0,"name":"/sys/resource/update","code":"/sys/resource/update","type":3,"usable":"1","remarks":"","children":[]},
+        {"id":101,"parentId":82,"sort":0,"name":"/sys/resource/delete","code":"/sys/resource/delete","type":3,"usable":"1","remarks":"","children":[]},
+        {"id":102,"parentId":82,"sort":0,"name":"/sys/resource/add","code":"/sys/resource/add","type":3,"usable":"1","remarks":"","children":[]},
+        {"id":103,"parentId":82,"sort":0,"name":"/sys/resource/page","code":"/sys/resource/page","type":3,"usable":"1","remarks":"","children":[]},
+        {"id":104,"parentId":82,"sort":0,"name":"/sys/resource/list","code":"/sys/resource/list","type":3,"usable":"1","remarks":"","children":[]},
+        {"id":105,"parentId":82,"sort":0,"name":"/sys/resource/list2","code":"/sys/resource/list2","type":3,"usable":"1","remarks":"","children":[]}]
+      },
       {"id":70,"parentId":69,"sort":1,"name":"菜单管理","code":"/sys/menuList","type":1,"usable":"1","remarks":"","children":[{"id":83,"parentId":70,"sort":0,"name":"/sys/menu/get","code":"/sys/menu/get","type":3,"usable":"1","remarks":"","children":[]},
         {"id":84,"parentId":70,"sort":0,"name":"/sys/menu/update","code":"/sys/menu/update","type":3,"usable":"1","remarks":"","children":[]},
         {"id":85,"parentId":70,"sort":0,"name":"/sys/menu/delete","code":"/sys/menu/delete","type":3,"usable":"1","remarks":"","children":[]},
@@ -38,40 +88,8 @@
         {"id":110,"parentId":72,"sort":0,"name":"/sys/user/page","code":"/sys/user/page","type":3,"usable":"1","remarks":"","children":[]},
         {"id":111,"parentId":72,"sort":0,"name":"/sys/user/roleIds","code":"/sys/user/roleIds","type":3,"usable":"1","remarks":"","children":[]},
         {"id":112,"parentId":72,"sort":0,"name":"/sys/user/setRoles","code":"/sys/user/setRoles","type":3,"usable":"1","remarks":"","children":[]}]}]}],
-  "messageList":[
-    {"id":196,"title":"测试消息1","summary":"1张产品图片处理","userId":1,"entityId":1},
-    {"id":196,"title":"测试消息2","summary":"1张产品图片处理","userId":1,"entityId":2},
-    {"id":196,"title":"测试消息3","summary":"1张产品图片处理","userId":1,"entityId":3},
-    {"id":196,"title":"测试消息4","summary":"1张产品图片处理","userId":1,"entityId":4},
-    {"id":196,"title":"测试消息5","summary":"1张产品图片处理","userId":1,"entityId":5},
-    {"id":196,"title":"测试消息6","summary":"1张产品图片处理","userId":1,"entityId":6},
-    {"id":195,"title":"测试消息7","summary":"1张产品图片处理","userId":1,"entityId":7}
-  ],
-  "menuList": [
-    {"id":1,"parentId":null,"sort":0,"name":"仪表盘","href":"/index","icon":"fa fa-dashboard","children":[],
-      "isShow":"1"},
-    {"id":31,"parentId":null,"sort":1,"name":"测试1","href":"/test/1","icon":"fa fa-upload","children":
-    [
-      {"id":92,"parentId":31,"sort":0,"name":"测试1-1","href":"/test/1/1","icon":"fa fa-bank","children":[
-        {"id":912,"parentId":92,"sort":0,"name":"测试1-1-1","href":"/test/1/1/1","icon":"fa fa-bank","children":[],"isShow":"1"},
-        {"id":913,"parentId":92,"sort":0,"name":"测试1-1-2","href":"/test/1/1/2","icon":"fa fa-area-chart","children":[],"isShow":"1"}
-      ],"isShow":"1"},
-      {"id":93,"parentId":31,"sort":0,"name":"测试1-2","href":"/test/1/2","icon":"fa fa-area-chart","children":[],"isShow":"1"}
-    ]
-    ,"isShow":"1"},
-    {"id":102,"parentId":null,"sort":3,"name":"测试2","href":"/test/2","icon":"fa fa-download","children":
-    [
-      {"id":103,"parentId":102,"sort":0,"name":"测试2-1","href":"/test/2/1","icon":"fa fa-image","children":[],"isShow":"1"}
-    ]
-    ,"isShow":"1"},
-    {"id":6,"parentId":null,"sort":6,"name":"系统管理","href":"/sys","icon":"el-icon-setting","children":
-    [
-      {"id":108,"parentId":6,"sort":0,"name":" 资源管理","href":"/sys/resource","icon":"fa fa-database","children":[],"isShow":"1"},
-      {"id":7,"parentId":6,"sort":1,"name":"菜单管理","href":"/sys/menuList","icon":"fa fa-navicon","children":[],"isShow":"1"},
-      {"id":8,"parentId":6,"sort":2,"name":"角色管理","href":"/sys/roleList","icon":"fa fa-universal-access","children":[],"isShow":"1"},
-      {"id":9,"parentId":6,"sort":3,"name":"用户管理","href":"/sys/userList","icon":"fa fa-user-plus","children":[],"isShow":"1"}
-    ]
-    ,"isShow":"1"}],
+
+
   "roleList":[
     {"id":26,"delFlag":0,"parentId":null,"sort":0,"name":"超级管理员","enName":"super_manager","usable":"1","remarks":"","children":[]},
     {"id":27,"delFlag":0,"parentId":null,"sort":1,"name":"客服主管","enName":"server_manager","usable":"1","remarks":"","children":[

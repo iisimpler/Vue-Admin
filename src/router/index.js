@@ -12,14 +12,38 @@ import resetPwd from "../pages/resetPwd.vue";
 const routes = [
   {path: '/login', component: login},
   {
-    path: '/test', component: app, children: [
-    {path: '*', component: NotFoundView}
-  ]
-  },
-  {
     path: '', component: app, children: [
-    {path: '/resetPwd', component: resetPwd},
+    {path: '/', component: dashboard},
     {path: '/index', component: dashboard},
+
+    {path: '/staffManagement', component: NotFoundView},
+    {path: '/staffManagement/staffInformatinManagement', component: NotFoundView},
+    {path: '/staffManagement/notices', component: NotFoundView},
+
+    {path: '/careManagement/careManagement', component: NotFoundView},
+
+    {path: '/goodsManagement', component: NotFoundView},
+    {path: '/goodsManagement/goodsSearch', component: NotFoundView},
+    {path: '/goodsManagement/purchaseHistory', component: NotFoundView},
+    {path: '/goodsManagement/storageHistory', component: NotFoundView},
+    {path: '/goodsManagement/useHistory', component: NotFoundView},
+    {path: '/goodsManagement/goodsMaintenance', component: NotFoundView},
+
+    {path: '/serviceTypeManagement', component: NotFoundView},
+    {path: '/serviceTypeManagement/serviceTypeManagement', component: NotFoundView},
+    {path: '/serviceTypeManagement/purchaseHistory', component: NotFoundView},
+    {path: '/serviceTypeManagement/storageHistory', component: NotFoundView},
+    {path: '/serviceTypeManagement/useHistory', component: NotFoundView},
+
+    {path: '/financialManagement', component: NotFoundView},
+    {path: '/financialManagement/earningsRecord', component: NotFoundView},
+    {path: '/financialManagement/expenditureRecord', component: NotFoundView},
+    {path: '/financialManagement/financialStatements', component: NotFoundView},
+
+    {path: '/homeService', component: NotFoundView},
+    {path: '/homeService/orderList', component: NotFoundView},
+
+    {path: '/resetPwd', component: resetPwd},
     {path: '/sys/menuList', component: menuList},
     {path: '/sys/roleList', component: role},
     {path: '/sys/userList', component: sysUser},

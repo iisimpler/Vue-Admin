@@ -1,5 +1,12 @@
 <template>
-  <el-submenu :index="item.href" v-if="item.children && item.children.length>0">
+  <!--<el-submenu :index="item.href" v-if="item.children && item.children.length>0">
+    <template slot="title"><i :class="item.icon"></i>{{item.name}}</template>
+    <template v-for="child in item.children">
+      <sub-menu v-if="child.children && child.children.length>0" :param="child"></sub-menu>
+      <el-menu-item :index="child.href" v-else><i :class="child.icon"></i>{{child.name}}</el-menu-item>
+    </template>
+  </el-submenu>-->
+  <el-submenu :index="item.id" v-if="item.isShow == 1">
     <template slot="title"><i :class="item.icon"></i>{{item.name}}</template>
     <template v-for="child in item.children">
       <sub-menu v-if="child.children && child.children.length>0" :param="child"></sub-menu>
